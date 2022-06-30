@@ -1,0 +1,27 @@
+name: Caliper Benchmarks
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  # channelName of mychannel matches the name of the channel created by test network
+  - channelName: mychannel
+    # the chaincodeIDs of all the fabric chaincodes in caliper-benchmarks
+    contracts:
+    - id: simple
+
+
+organizations:
+  - mspid: Org1MSP
+    # Identities come from cryptogen created material for test-network
+    identities:
+      certificates:
+      - name: 'Admin'
+        clientPrivateKey:
+          path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/keystore/{{CLIENTKEYSTORE}}'
+        clientSignedCert:
+          path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/signcerts/cert.pem'
+    connectionProfile:
+      path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/connection-org1.yaml'
+      discover: true

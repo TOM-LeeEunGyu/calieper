@@ -75,8 +75,9 @@ class SimpleState {
      */
     getOpenAccountArguments() {
         this.accountsGenerated++;
+        const ranInt = Math.floor(Math.random()*2147000000);
         return {
-            account: this._getAccountKey(this.accountsGenerated),
+            account: this._getAccountKey(this.accountsGenerated)+"_"+ranInt,
             money: this.initialMoney
         };
     }
@@ -101,6 +102,12 @@ class SimpleState {
             target: this._getRandomAccount(),
             amount: this.moneyToTransfer
         };
+    }
+
+    getDeleteArguments() {
+        return {
+            account: this._getRandomAccount()
+        }
     }
 }
 

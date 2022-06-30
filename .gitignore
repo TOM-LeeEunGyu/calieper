@@ -1,6 +1,7 @@
 # Git Ignore file
 .idea/
 launch.json
+node_modules
 
 # No logs
 *.log

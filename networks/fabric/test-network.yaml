@@ -9,22 +9,19 @@ channels:
   - channelName: mychannel
     # the chaincodeIDs of all the fabric chaincodes in caliper-benchmarks
     contracts:
-    - id: fabcar
-    - id: fixed-asset
-    - id: marbles
     - id: simple
-    - id: smallbank
+
 
 organizations:
   - mspid: Org1MSP
     # Identities come from cryptogen created material for test-network
     identities:
       certificates:
-      - name: 'User1'
+      - name: 'Admin'
         clientPrivateKey:
-          path: '../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/priv_sk'
+          path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/keystore/2d7d05ecf954d17a6f46b816ce92eb3427c4deef9d283c25495ebdd9b72894cd_sk'
         clientSignedCert:
-          path: '../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem'
+          path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/signcerts/cert.pem'
     connectionProfile:
-      path: '../fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml'
+      path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/connection-org1.yaml'
       discover: true
