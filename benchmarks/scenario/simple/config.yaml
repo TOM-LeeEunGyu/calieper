@@ -1,7 +1,7 @@
 simpleArgs: &simple-args
   initialMoney: 10000
   moneyToTransfer: 100
-  numberOfAccounts: &number-of-accounts 20000
+  numberOfAccounts: &number-of-accounts 3000
 
 test:
   name: simple
@@ -10,7 +10,7 @@ test:
     performance with simple account opening & querying transactions.
   workers:
     type: local
-    number: 5
+    number: 3
   rounds:
     - label: open
       description: >-
@@ -20,7 +20,7 @@ test:
       rateControl:
         type: fixed-rate
         opts:
-          tps: 1000
+          tps: 2500
       workload:
         module: benchmarks/scenario/simple/open.js
         arguments: *simple-args

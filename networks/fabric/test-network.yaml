@@ -19,9 +19,9 @@ organizations:
       certificates:
       - name: 'Admin'
         clientPrivateKey:
-          path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/keystore/2d7d05ecf954d17a6f46b816ce92eb3427c4deef9d283c25495ebdd9b72894cd_sk'
+          path: '../docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/keystore/b4466ab356399c7096ea7f08db13f9286571dc1804e24af8af1007d3a53fed24_sk'
         clientSignedCert:
-          path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/signcerts/cert.pem'
+          path: '../docker/organizations/peerOrganizations/org1.themedium.io/users/Admin@org1.themedium.io/msp/signcerts/cert.pem'
     connectionProfile:
-      path: '/home/ubuntu/mdl-2.2-testnet/docker/organizations/peerOrganizations/org1.themedium.io/connection-org1.yaml'
+      path: '../docker/organizations/peerOrganizations/org1.themedium.io/connection-org1.yaml'
       discover: true
